@@ -12,13 +12,15 @@ class AdminsTableSeeder extends Seeder
      */
     public function run()
     {
-    	$faker = Faker::create();
-    	for ($i=0; $i < 5; $i++) { 
-	        DB::table('admins')->insert([
-	            'nama' => $faker->name,
-	            'username' => $faker->userName,
-	            'password' => $faker->password,
-	        ]);
-    	}
+        $faker = Faker::create();
+        for ($i=0; $i < 5; $i++) {
+            DB::table('admins')->insert([
+                'nama'       => $faker->name,
+                'username'   => $faker->userName,
+                'password'   => $faker->password,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+        }
     }
 }
