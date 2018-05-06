@@ -18,7 +18,7 @@ class CreateDataAbsensTable extends Migration
             $table->integer('id_mahasiswa')->unsigned();
             $table->integer('id_jadwal')->unsigned();
             $table->enum('status', ['M', 'S', 'I', 'A']);
-            $table->integer('jumlah_jam');
+            $table->integer('jumlah_jam')->nullable();
             $table->timestamps();
 
             $table->foreign('id_mahasiswa')

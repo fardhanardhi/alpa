@@ -16,6 +16,7 @@ class CreateProdisTable extends Migration
         Schema::create('prodis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->string('kode');
             $table->integer('id_jurusan')->unsigned();
             $table->timestamps();
 

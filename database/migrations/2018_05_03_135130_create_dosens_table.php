@@ -15,9 +15,10 @@ class CreateDosensTable extends Migration
     {
         Schema::create('dosens', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nip');
+            $table->string('nip');
             $table->string('nama');
             $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->string('password');
             $table->timestamps();
         });
     }

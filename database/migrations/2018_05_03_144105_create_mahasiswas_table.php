@@ -15,10 +15,11 @@ class CreateMahasiswasTable extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nim');
+            $table->string('nim');
             $table->string('nama');
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->integer('id_kelas')->unsigned();
+            $table->string('password');
             $table->timestamps();
 
             $table->foreign('id_kelas')
